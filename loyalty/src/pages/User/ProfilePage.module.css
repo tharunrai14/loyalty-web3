@@ -1,0 +1,66 @@
+/* ProfilePage.module.css */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1450px;
+  height: 100vh;
+  overflow-x: hidden;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.balance {
+  font-size: 1.2rem;
+  color: #ff6b00;
+}
+
+.profilePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex: 1; */
+}
+
+.toggleButton {
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggleButton:hover {
+  background-color: #ff4f00;
+}
+
+.referSection {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
