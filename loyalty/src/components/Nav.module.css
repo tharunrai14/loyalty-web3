@@ -40,6 +40,10 @@
   .navLinks a {
     color: #fff;
     text-decoration: none;
+    background-color: rgb(29, 28, 28);
+    padding: 1rem;
+    border-radius: 0.5rem;
+
   }
   
   .navLinks a:hover {
@@ -49,6 +53,8 @@
   /* Styles for the active link */
   .active {
     font-weight: bold;
+    background-color: #fff;
+    
   }
   
   .rightSection {
