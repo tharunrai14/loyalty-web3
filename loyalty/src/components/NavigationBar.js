@@ -7,14 +7,14 @@ const NavigationBar = () => {
   const address = useRouteLoaderData("root");
   const ctx = useContext(WalletContext);
 
-  useEffect(() => {
-    if (address == null || address.length <= 3) {
-      console.log("Navigation", ctx);
-      ctx.address = "";
-      ctx.smartAccount = null;
-      ctx.provider = null;
-    }
-  }, [address, ctx.address]);
+  // useEffect(() => {
+  //   if (address == null || address.length <= 3) {
+  //     console.log("Navigation", ctx);
+  //     ctx.address = "";
+  //     ctx.smartAccount = null;
+  //     ctx.provider = null;
+  //   }
+  // }, [address, ctx.address]);
 
   return (
     <nav className={styles.nav}>
@@ -66,13 +66,13 @@ const NavigationBar = () => {
                   </NavLink>
                 </li>
               )}
-              {(ctx.admin || ctx.superAdmin || ctx.profile) && (
+              {/* {(ctx.admin || ctx.superAdmin || ctx.profile) && ( */}
                 <li>
                   <NavLink to="profile" activeClassName={styles.active}>
-                    profile
+                    Profile
                   </NavLink>
                 </li>
-              )}
+              {/* )} */}
               <li>
                 <form action="logout" method="post">
                   <button className={styles.formButton}>Logout</button>
