@@ -22,13 +22,21 @@
   .logo span {
     font-size: 1.2rem;
   }
-  
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D1B1E;
+    color: #fff;
+    padding: 1rem;
+  }
   .navLinks {
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
+    
   }
   
   .navLinks li {
@@ -38,9 +46,9 @@
   }
   
   .navLinks a {
-    color: #fff;
+    color:#0D1B1E;
     text-decoration: none;
-    background-color: rgb(29, 28, 28);
+    background-color: #C3DBC5;
     padding: 1rem;
     border-radius: 0.5rem;
 

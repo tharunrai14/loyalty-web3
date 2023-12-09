@@ -3,6 +3,7 @@ import { Link,NavLink, useRouteLoaderData } from "react-router-dom";
 import WalletContext from "../context/wallet-context";
 import styles from "./Nav.module.css";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import logo from './logo.png';
 
 
 const NavigationBar = () => {
@@ -22,7 +23,7 @@ const NavigationBar = () => {
     <nav className={styles.nav}>
       <div className={styles.leftSection}>
         <div className={styles.logo}>
-          <Link to="/"><img src="loyalty\src\components\Spin\l.png" alt="Company Logo" /></Link>
+          <Link to="/"><img src={logo} alt="Company Logo" /></Link>
           
         </div>
         <ul className={styles.navLinks}>

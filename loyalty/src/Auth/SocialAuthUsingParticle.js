@@ -14,7 +14,7 @@ import SendToken from "../components/SendToken";
 import WalletContext from "../context/wallet-context";
 import DappABI from "../contract-ABI/DappABI";
 import ClaimPortalABI from "../contract-ABI/ClaimPortalABI";
-
+import styles from "./login.module.css"
 export default function SocialAuthUsingParticle() {
   const [address, setAddress] = useState("");
   const [loading, setLoading] = useState(false);
@@ -158,14 +158,14 @@ export default function SocialAuthUsingParticle() {
   return (
     <>
       {ctx.address && navigate("/profile")}
-      <Form action="login" method="post">
-        <h1>
-          <title>Login to WAGMI </title>
+      <Form  action="login" method="post">
+       <div className={styles.logintext}> <h1>
+          <title >Login to WAGMI </title>
           <meta name="description" content="Login" />
         </h1>
-        <h1>Login to WAGMI</h1>
+        <div className={styles.logintextdata}><h1 >Login to WAGMI</h1>
         {!loading && !address && (
-          <button onClick={connect}>Click to login</button>
+          <button className={styles.loginb} onClick={connect}>Click to login</button>
         )}
         {/* {(ctx.provider = provider)}
         {(ctx.address = address)}*/}
@@ -178,6 +178,8 @@ export default function SocialAuthUsingParticle() {
           provider={provider}
           />
         )} */}
+        </div>
+        </div>
       </Form>
 
       {ctx.address && navigate("/profile")}
