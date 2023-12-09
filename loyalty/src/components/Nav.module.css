@@ -56,12 +56,14 @@
   
   .navLinks a:hover {
     text-decoration: underline;
+    color: #3b3333;
   }
   
   /* Styles for the active link */
-  .active {
+  .activep {
     font-weight: bold;
     background-color: #fff;
+    padding: 0%;
     
   }
   

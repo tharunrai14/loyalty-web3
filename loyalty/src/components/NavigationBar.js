@@ -49,8 +49,8 @@ const NavigationBar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="profile" activeClassName={styles.active}>
-                <AccountCircleIcon />
+                <NavLink to="profile" activeClassName={styles.activep}>
+                Profile
                 </NavLink>
               </li>
             </>

@@ -4,6 +4,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the ca
 import "./HomePgae.css"; // Import your custom CSS for styling
 import ProductsList from "./Products/ProductsList";
 import s1 from './images/sl1.png';
+import s2 from './images/eco.jpg';
+import s3 from './images/lyl.jpg';
+// import s4 from './images/rfr.jpg';
+
 function HomePgae() {
   return (
     <>
@@ -13,10 +17,10 @@ function HomePgae() {
           <img src={s1} alt="Image 1"  />
         </div>
         <div className="slider-image">
-          <img src="../images/eco.jpg" alt="Image 2" />
+          <img src={s2} alt="Image 2" />
         </div>
         <div className="slider-image">
-          <img src="../images/rfr.jpg" alt="Image 3" />
+          <img src={s3} alt="Image 3" />
         </div>
         {/* Add more divs with images as needed */}
       </Carousel>
