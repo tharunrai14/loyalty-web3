@@ -34,7 +34,7 @@ const NavigationBar = () => {
           </li>
           <li>
             <NavLink to="products" activeClassName={styles.active}>
-              Productss
+              Products
             </NavLink>
           </li>
         </ul>

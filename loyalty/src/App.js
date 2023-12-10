@@ -17,6 +17,8 @@ import {
 import WalletContext from "./context/wallet-context";
 import AdminPage from "./pages/Admin/AdminPage";
 import SuperAdminPage from "./pages/SuperAdmin/SuperAdminPage";
+import MessageComponent from "./pages/Admin/Airstack/Query";
+import MessagePage from "./pages/Admin/Airstack/MessagePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +37,8 @@ const router = createBrowserRouter([
       },
       { path: "logout", action: logoutAction },
       { path: "admin", element: <AdminPage /> },
+      { path: "admin/:address", element: <MessageComponent /> },
+      { path: "admin/:address/message", element: <MessagePage /> },
       { path: "superadmin", element: <SuperAdminPage /> },
     ],
   },
