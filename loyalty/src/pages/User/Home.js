@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
 import "./HomePgae.css"; // Import your custom CSS for styling
 import ProductsList from "./Products/ProductsList";
 import s1 from './images/sl1.png';
-import s2 from './images/eco.jpg';
-import s3 from './images/lyl.jpg';
+import s2 from './images/sl2.png';
+import s3 from './images/sl3.png';
 // import s4 from './images/rfr.jpg';
 
 function HomePgae() {
