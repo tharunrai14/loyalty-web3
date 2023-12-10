@@ -1,17 +1,34 @@
 import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ethers } from "ethers";
 import TokenABI from "../../contract-ABI/TokenAbi";
 import WalletContext from "../../context/wallet-context";
 import { parseUnits, formatUnits } from "ethers/lib/utils";
 import SendToken from "../../components/functions/Admin/SendTokens";
 import styles from "./styles.module.css";
+import MessageComponent from "./Airstack/Query";
+
+const dummmyData = [
+  ["0xa91c2d10a993d14f842d23b97f2ab3fdf6b5b9aa", "69", "TV"],
+  ["0x5416e5dc14caa0950b2a24ede1eb0e97c360bcf5", "123", "Laptop"],
+];
+
+function DataCard({ data, onSelect }) {
+  return (
+    <div className={styles.dataCard} onClick={() => onSelect(data)}>
+      <p>ID: {data[0]}</p>
+      <p>Value: {data[1]}</p>
+      <p>Type: {data[2]}</p>
+    </div>
+  );
+}
 
 function AdminPage() {
   const ctx = useContext(WalletContext);
   const navigate = useNavigate();
   const [balance, setBalance] = useState(0);
   const [allowance, setAllownce] = useState(0);
+  const [selectedData, setSelectedData] = useState(null);
 
   useEffect(() => {
     if (ctx.admin === false && ctx.superAdmin === false) {
@@ -56,6 +73,10 @@ function AdminPage() {
     }
   }
 
+  const handleCardSelect = (data) => {
+    setSelectedData(data);
+  };
+
   return (
     <div className={styles.adminPageSection}>
       <h1 className={styles.sectionTitle}>Admin page</h1>
@@ -74,6 +95,23 @@ function AdminPage() {
       )}
       <div className={styles.componentsContainer}>
         <SendToken />
+      </div>
+
+      {/* Data about the purchasers */}
+      {/* <Component /> */}
+
+      <div>
+        <ul>
+          {dummmyData.map((data) => (
+            <li key={data[0]}>
+              <Link to={data[0]}>
+                {data[0]}
+                <p> Purchase amount = {data[1]}</p>
+                <p> Product name= {data[2]}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
